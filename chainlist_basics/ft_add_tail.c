@@ -6,7 +6,7 @@
 /*   By: kassassi <kassassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 11:31:01 by kassassi          #+#    #+#             */
-/*   Updated: 2025/05/15 12:14:46 by kassassi         ###   ########.fr       */
+/*   Updated: 2025/05/15 12:21:43 by kassassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	ft_add_tail(t_book **catalog, t_book *new_book)
 	t_book	*end_catalog;
 
 	end_catalog = *catalog;
-	if (*catalog == NULL)
-		*catalog = new_book;
+	if (end_catalog == NULL)
+		end_catalog = new_book;
 	else
 	{
 		while (end_catalog->next != NULL)
@@ -36,7 +36,8 @@ void	ft_add_tail(t_book **catalog, t_book *new_book)
 	}
 }
 
-/*int	main(void)
+/*
+int	main(void)
 {
 	t_book	*book8;
 	t_book	*book9;
@@ -65,4 +66,5 @@ void	ft_add_tail(t_book **catalog, t_book *new_book)
 		explorer = tmp;
 	}
 	return (0);
-}*/
+}
+*/
