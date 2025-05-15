@@ -6,7 +6,7 @@
 /*   By: kassassi <kassassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 18:42:26 by kassassi          #+#    #+#             */
-/*   Updated: 2025/05/14 19:37:34 by kassassi         ###   ########.fr       */
+/*   Updated: 2025/05/15 12:11:34 by kassassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ typedef struct s_book
 	struct s_book	*next;
 }	t_book;
 
-t_book	*create_book(char *title, int date);
+t_book	*ft_create_book(char *title, int date);
+void	ft_add_tail(t_book **explorer, t_book *last_book);
 
 #endif

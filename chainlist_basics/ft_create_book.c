@@ -6,7 +6,7 @@
 /*   By: kassassi <kassassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:41:15 by kassassi          #+#    #+#             */
-/*   Updated: 2025/05/15 11:12:56 by kassassi         ###   ########.fr       */
+/*   Updated: 2025/05/15 12:12:54 by kassassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,26 +41,31 @@ Creates a dynamic linked list of books, prints each one, and frees the memory.
 
 */
 
-int	main(void)
+/*int	main(void)
 {
-	t_book	*book5 = ft_create_book("La Faute de l'Abbé Mouret", 1875);
-	t_book	*book6 = ft_create_book("Son Excellence Eugène Rougon", 1876);
-	t_book	*book7 = ft_create_book("L'Assommoir", 1877);
+	t_book	*book5;
+	t_book	*book6;
+	t_book	*book7;
 	t_book	*explorer;
 	t_book	*tmp;
+
+	book5 = ft_create_book("La Faute de l'Abbé Mouret", 1875);
+	book6 = ft_create_book("Son Excellence Eugène Rougon", 1876);
+	book7 = ft_create_book("L'Assommoir", 1877);
 
 	book5->next = book6;
 	book6->next = book7;
 	book7->next = NULL;
 
 	explorer = book5;
+	printf("\n");
 	while (explorer != NULL)
 	{
 		tmp = explorer->next;
-		printf("Title: %s\n", explorer->title);
+		printf("Title: \"%s\"\n", explorer->title);
 		printf("Published date: %d\n\n", explorer->date);
 		free(explorer);
 		explorer = tmp;
 	}
 	return (0);
-}
+}*/
