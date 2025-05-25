@@ -42,3 +42,32 @@ augroup HighlightTypedefs
     autocmd!
     autocmd FileType c syntax match cType /\<t_[A-Za-z0-9_]*\>/
 augroup END
+
+call plug#begin('~/.local/share/nvim/plugged')
+
+" Arbre de fichiers
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'nvim-tree/nvim-web-devicons'  " icônes (optionnel)
+
+" Recherche de fichiers
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'morhetz/gruvbox'
+Plug 'projekt0n/github-nvim-theme'
+
+call plug#end()
+
+" === CONFIG LUA pour nvim-tree ===
+lua << EOF
+require("nvim-tree").setup()
+EOF
+
+" Raccourci F2 pour ouvrir l'arbre
+nnoremap <F2> :NvimTreeToggle<CR>
+
+" === Raccourcis Telescope ===
+nnoremap <F3> <cmd>Telescope find_files<CR>
+
+syntax enable
+set background=dark
+colorscheme gruvbox
