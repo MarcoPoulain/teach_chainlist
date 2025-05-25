@@ -6,7 +6,7 @@
 /*   By: kassassi <kassassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 13:31:36 by kassassi          #+#    #+#             */
-/*   Updated: 2025/05/17 16:16:52 by kassassi         ###   ########.fr       */
+/*   Updated: 2025/05/17 16:45:28 by kassassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static void	global_change_book_fail(t_book *old_book, t_book *new_book)
 
 static void	global_change_book_success(t_book **old_book, t_book **new_book)
 {
+	free(*old_book);
 	*old_book = *new_book;
 	printf("Function global_change_book_success:\n");
 	printf("I'm applying the change inside the function\n");
